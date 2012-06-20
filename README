@@ -1,0 +1,32 @@
+# countdown.js
+
+We seem to have to put up a lot of sites where the amount of time to some event happening
+has to be calculated, usually in the format of
+
+    * 24 day 12 hours 22 minutes Left!
+
+So this is a simple library that returns the amount of time left between two dates (the
+web browser's "now" and the date specified) in:
+
+  * days
+  * hours
+  * minutes
+
+
+For example, the countdown to 25 hours from now will return 01 days, 01 hours, 00 minutes.
+
+
+## Usage Example
+
+    countdown = new Countdown('February 29, 2012 5:15 PM');
+    console.log(countdown);
+
+## Return Value
+
+The return value is a generic object with the following 3 properties:
+
+    object.days
+    object.hours
+    object.minutes
+
+Numbers less then 10 are 0 padded, so 8 minutes returns '08'
